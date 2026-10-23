@@ -101,10 +101,49 @@ img{
     line-height: 1.5;
 }
 
+/* ==========================
+   Service Cards
+========================== */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.service-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+    text-align: left;
+    display: block;
+}
+.service-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.service-content {
+    padding: 1.25rem;
+}
+.service-content h3 {
+    margin-bottom: 1rem;
+}
+.service-content p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #666;
+}
+.service-content a {
+    text-decoration: none;
+    color: #DE6C17;
+    font-weight: 700;
+}
+
 /* ====================================
    Tablet Layout (768px - 1023px)
    ==================================== */
-
 @media (min-width: 768px) and (max-width: 1023px){
     .hero-section{
         min-height: 500px;
@@ -115,6 +154,21 @@ img{
     }
     .hero-description{
         font-size: 20px;
+    }
+    .services-grid{
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .service-card{
+        display: flex;
+    }
+    .service-image{
+        width: 40%;
+        height: auto;
+    }
+    .service-content{
+        width: 60%;
+        padding: 24px;
     }
 }
 
@@ -157,5 +211,18 @@ img{
     }
     .services-section{
         padding: 48px 24px;
+    }
+    .services-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .service-card{
+        display: block;
+    }
+    .service-image{
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
     }
 }
